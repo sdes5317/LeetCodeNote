@@ -18,7 +18,7 @@
 ### 4. 字母表
     var map = new int[26]
     不只可以用來計算出現的字母數, 實際是一個**已排序的陣列**
-    搭配var key = new string(map)
+    搭配var hashKey = new string(map), 可以用來做差異比對
 ### 5. 表回朔
     當遞迴共享Hash Table的時候, 且同步運算時, 如果結果是False, 則Remove失敗路線的值
     var hashTable = new HashSet();
