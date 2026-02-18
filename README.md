@@ -20,7 +20,10 @@
     不只可以用來計算出現的字母數, 實際是一個**已排序的陣列**
     搭配var key = new string(map)
 ### 5. 表回朔
-    當遞迴共享Hash Table的時候, 當同步運算時, 如果結果是False, 則Remove失敗路線的值
+    當遞迴共享Hash Table的時候, 且同步運算時, 如果結果是False, 則Remove失敗路線的值
+    var hashTable = new HashSet();
+    var isOk = Left(hashTable) | Right(hashTable);
+    (由於左右只會有一個成功, 失敗的那個會Rollback讓表可以共用)
 ### 6. 單向貪婪
     類似左右雙指針的題型, 且目標是找「滿足↔失效」的邊界點
     其實是單向貪婪(複雜度更低)
