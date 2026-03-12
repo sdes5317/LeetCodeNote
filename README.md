@@ -24,7 +24,7 @@
     var hashTable = new HashSet();
     var isOk = Left(hashTable) | Right(hashTable);
     (由於左右只會有一個成功, 失敗的那個會Rollback讓表可以共用)
-### 6. 單向貪婪
+### 6. 單向貪婪(Sliding window)
     類似左右雙指針的題型, 且目標是找「滿足↔失效」的邊界點
     其實是單向貪婪(複雜度更低)
     先還清(右)再精算(左), 全程不走分支, 只有一條路
